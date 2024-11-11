@@ -226,7 +226,7 @@ function startsWith(str, substr) {
  *   endsWith('Hello World', 'Hello') => false
  */
 function endsWith(str, substr) {
-  return str.lastIndexOf(substr) === str.length - substr.length;
+  return str.endsWith(substr);
 }
 
 /**
