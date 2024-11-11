@@ -8,8 +8,8 @@
 /**
  * Returns the length of the given string.
  *
- * @param {string} value - Входная строка для расчета длины.
- * @return {number} -Длина струны.
+ * @param {string} value - The input string to calculate the length of.
+ * @return {number} - The length of the string.
  *
  * @example
  *   getStringLength('aaaaa') => 5
@@ -27,10 +27,10 @@ function getStringLength(value) {
 }
 
 /**
- * Возвращает true, если значение является строкой, в противном случае возвращает false.
+ * Returns true if the value is a string, otherwise returns false.
  *
- * @param {string} value - Значение, чтобы проверить, является ли это строкой.
- * @return {boolean} - Верно, если значение - это строка, false в противном случае.
+ * @param {string} value - The value to check if it's a string.
+ * @return {boolean} - True if the value is a string, false otherwise.
  *
  * @example
  *   isString() => false
@@ -45,11 +45,11 @@ function isString(value) {
 }
 
 /**
- * Возвращает результат объединения двух строк.
+ * Returns the result of concatenation of two strings.
  *
- * @param {string} value1 - Первая строка для объединения.
- * @param {string} value2 - Вторая строка для объединения.
- * @return {string} - Согласованная строка.
+ * @param {string} value1 - The first string to concatenate.
+ * @param {string} value2 - The second string to concatenate.
+ * @return {string} - The concatenated string.
  *
  * @example
  *   concatenateStrings('aa', 'bb') => 'aabb'
@@ -61,10 +61,10 @@ function concatenateStrings(value1, value2) {
 }
 
 /**
- * Возвращает первый символ данной строки.
+ * Returns the first character of the given string.
  *
- * @param {string} value - Входная строка, чтобы извлечь первый символ из.
- * @return {string} - Первый символ строки.
+ * @param {string} value - The input string to extract the first character from.
+ * @return {string} - The first character of the string.
  *
  * @example
  *   getFirstChar('John Doe') => 'J'
@@ -72,16 +72,14 @@ function concatenateStrings(value1, value2) {
  *   getFirstChar('') => ''
  */
 function getFirstChar(value) {
-  if (value.length === 0) {
-    return '';
-  }
-  return value.charAt(0);
+  return value ? value.charAt(0) : '';
 }
+
 /**
- * Удаляет ведущие и следующий пробел символов из строки.
+ * Removes leading and trailing whitespace characters from the string.
  *
- * @param {string} value - Входная строка для удаления ведущих и следственных пробелов из.
- * @return {string} - Строка с ведущими и запекающими пробелами удалена.
+ * @param {string} value - The input string to remove leading and trailing whitespaces from.
+ * @return {string} - The string with leading and trailing whitespaces removed.
  *
  * @example
  *   removeLeadingAndTrailingWhitespaces('  Abracadabra') => 'Abracadabra'
@@ -93,10 +91,10 @@ function removeLeadingAndTrailingWhitespaces(value) {
 }
 
 /**
- * Удаляет только ведущие матча -символы из строки.
+ * Removes only leading whitespace characters from the string.
  *
- * @param {string} value - Входная строка для удаления ведущих пробелов.
- * @return {string} - Строка с ведущими пробелами удалена.
+ * @param {string} value - The input string to remove leading whitespaces from.
+ * @return {string} - The string with leading whitespaces removed.
  *
  * @example
  *   removeLeadingWhitespaces('  Abracadabra') => 'Abracadabra'
@@ -108,10 +106,10 @@ function removeLeadingWhitespaces(value) {
 }
 
 /**
- * Удаляет только запекание символов пробелов из строки.
+ * Removes only trailing whitespace characters from the string.
  *
- * @param {string} value - Входная строка для удаления сцепных путей.
- * @return {string} - Строка с удаленными пробелами удалена.
+ * @param {string} value - The input string to remove trailing whitespaces from.
+ * @return {string} - The string with trailing whitespaces removed.
  *
  * @example
  *   removeTrailingWhitespaces('  Abracadabra') => '  Abracadabra'
@@ -123,11 +121,11 @@ function removeTrailingWhitespaces(value) {
 }
 
 /**
- * Возвращает строку, которая повторяется указанное количество раз.
+ * Returns a string that is repeated the specified number of times.
  *
- * @param {string} str - Строка повторить.
- * @param {number} times - Количество раз повторить строку.
- * @return {string} - Строка результата.
+ * @param {string} str - The string to repeat.
+ * @param {number} times - The number of times to repeat the string.
+ * @return {string} - The result string.
  *
  * @example
  *   repeatString('A', 5) => 'AAAAA'
@@ -136,18 +134,18 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('abc', -2) => ''
  */
 function repeatString(str, times) {
-  if (times <= 0) {
+  if (times < 0) {
     return '';
   }
   return str.repeat(times);
 }
 
 /**
- * Удалите первое вхождение подстроения из строки.
+ * Remove the first occurrence of a substring from a string.
  *
- * @param {string} str - Входная строка.
- * @param {string} value - Подстроение для удаления из строки.
- * @return {string} - Строка с первым появлением подстроки удалена.
+ * @param {string} str - The input string.
+ * @param {string} value - The substring to remove from the string.
+ * @return {string} - The string with the first occurrence of the substring removed.
  *
  * @example
  *   removeFirstOccurrences('To be or not to be', 'be') => 'To  or not to be'.
@@ -163,11 +161,11 @@ function removeFirstOccurrences(str, value) {
 }
 
 /**
- * Удалите последнее вхождение подстроения из строки.
+ * Remove the last occurrence of a substring from a string.
  *
- * @param {string} str - Входная строка.
- * @param {string} value - Подстроение для удаления из строки.
- * @return {string} - Строка с последним появлением подстроки удалена.
+ * @param {string} str - The input string.
+ * @param {string} value - The substring to remove from the string.
+ * @return {string} - The string with the last occurrence of the substring removed.
  *
  * @example
  *   removeLastOccurrences('To be or not to be', 'be') => 'To be or not to '.
@@ -175,18 +173,18 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeLastOccurrences(str, value) {
-  const lastIndex = str.lastIndexOf(value);
-  if (lastIndex === -1) {
+  const index = str.lastIndexOf(value);
+  if (index === -1) {
     return str;
   }
-  return str.slice(0, lastIndex) + str.slice(lastIndex + value.length);
+  return str.slice(0, index) + str.slice(index + value.length);
 }
 
 /**
- * Рассчитайте сумму кодов символов данной строки.
+ * Calculate the sum of character codes of the given string.
  *
- * @param {string} str - Входная строка.
- * @return {number} - Сумма кодов символов строки.
+ * @param {string} str - The input string.
+ * @return {number} - The sum of character codes of the string.
  *
  * @example
  *   sumOfCodes('My String') => 861 (77 + 121 + 32 + 83 + 116 + 114 + 105 + 110 + 103 = 861)
@@ -198,49 +196,45 @@ function sumOfCodes(str) {
   if (!str) {
     return 0;
   }
-  let sum = 0;
-  for (let i = 0; i < str.length; i) {
-    sum += str.charCodeAt(i);
-  }
-  return sum;
+  return str.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
 }
 
 /**
- * Проверяет, начинается ли строка с определенной подстроки.
+ * Checks if a string starts with a specific substring.
  *
- * @param {string} str - Входная строка.
- * @param {string} substr - Подстроение для проверки.
- * @return {boolean} - Возвращает True, если строка начинается с подстроения, False в противном случае.
+ * @param {string} str - The input string.
+ * @param {string} substr - The substring to check.
+ * @return {boolean} - Returns true if str starts with substr, false otherwise.
  *
  * @example:
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
 function startsWith(str, substr) {
-  return str.startsWith(substr);
+  return str.indexOf(substr) === 0;
 }
 
 /**
- * Проверяет, заканчивается ли строка определенной подстрокой.
+ * Checks if a string ends with a specific substring.
  *
- * @param {string} str - Входная строка.
- * @param {string} substr - Подстроение для проверки.
- * @return {boolean} - Возвращает True, если строка начинается с подстроения, False в противном случае.
+ * @param {string} str - The input string.
+ * @param {string} substr - The substring to check.
+ * @return {boolean} - Returns true if str starts with substr, false otherwise.
  *
  * @example:
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
 function endsWith(str, substr) {
-  return str.endsWith(substr);
+  return str.lastIndexOf(substr) === str.length - substr.length;
 }
 
 /**
- * Возвращает строку времени в формате "MM: SS".
+ * Returns a time string in the "mm:ss" format.
  *
- * @param {number} minutes - Количество минут (неотрицательное целое число).
- * @param {number} seconds - Количество секунд (неотрицательное целое число).
- * @return {string} - Строка времени в формате "MM: SS".
+ * @param {number} minutes - The number of minutes (non-negative integer).
+ * @param {number} seconds - The number of seconds (non-negative integer).
+ * @return {string} - The time string in the "mm:ss" format.
  *
  * @example
  *   formatTime(5, 30) => "05:30"
@@ -249,16 +243,16 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  const formattedMinutes = String(minutes).padStart(2, '0');
-  const formattedSeconds = String(seconds).padStart(2, '0');
-  return `${formattedMinutes}:${formattedSeconds}`;
+  const minutesStr = minutes.toString().padStart(2, '0');
+  const secondsStr = seconds.toString().padStart(2, '0');
+  return `${minutesStr}:${secondsStr}`;
 }
 
 /**
- * Возвращает строку в обратном порядке.
+ * Returns a string in reverse order.
  *
- * @param {string} str - Входная строка.
- * @return {string} - Строка в обратном порядке.
+ * @param {string} str - The input string.
+ * @return {string} - The string in reverse order.
  *
  * @example:
  *   reverseString('abcdef') => 'fedcba'
@@ -269,10 +263,10 @@ function reverseString(str) {
 }
 
 /**
- * Возвращает строку с символами в алфавитном порядке.
+ * Returns a string with characters in alphabetical order.
  *
- * @param {string} str - Входная строка.
- * @return {string} - Строка в алфавитном порядке.
+ * @param {string} str - The input string.
+ * @return {string} - The string in alphabetical order.
  *
  * @example:
  *   orderAlphabetically('webmaster') => 'abeemrstw'
@@ -284,11 +278,11 @@ function orderAlphabetically(str) {
 }
 
 /**
- * Проверяет, содержит ли данная строка указанное подстроение.
+ * Checks if a given string contains a specified substring.
  *
- * @param {string} str - Входная строка для поиска внутри.
- * @param {string} substring - Подстроение для проверки на входной строке.
- * @returns {boolean} - TRUE Если входная строка содержит указанное подстроение, false в противном случае.
+ * @param {string} str - The input string to search within.
+ * @param {string} substring - The substring to check for in the input string.
+ * @returns {boolean} - True if the input string contains the specified substring, false otherwise.
  *
  * @example
  *   containsSubstring('Hello, World!', 'World') => true
@@ -300,11 +294,11 @@ function containsSubstring(str, substring) {
 }
 
 /**
- * Возвращает количество гласных в строке.
- * Гласные: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
+ * Returns the number of vowels in the string.
+ * Vowels: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
  *
- * @param {string} str - Входная строка.
- * @return {number} - Количество гласных в строке.
+ * @param {string} str - The input string.
+ * @return {number} - The number of vowels in the string.
  *
  * @example:
  *   countVowels('apple')  => 2
@@ -314,19 +308,16 @@ function containsSubstring(str, substring) {
  *   countVowels('XYZ') => 1
  */
 function countVowels(str) {
-  if (!str) {
-    return 0;
-  }
-  const vowels = str.match(/[aeiouyAEIOUY]/g);
-  return vowels ? vowels.length : 0;
+  const vowels = 'aeiouyAEIOUY';
+  return str.split('').filter((char) => vowels.includes(char)).length;
 }
 
 /**
- * Возвращает True, если строка является палиндром;в противном случае ложь.
+ * Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
  *
- * @param {string} str - Входная строка.
- * @return {bool} - Верно, если строка является палиндром, ложь в противном случае.
+ * @param {string} str - The input string.
+ * @return {bool} - True if the string is a palindrome, false otherwise.
  *
  * @example:
  *   isPalindrome('madam') => true
@@ -335,16 +326,16 @@ function countVowels(str) {
  *   isPalindrome('No lemon, no melon') => true
  */
 function isPalindrome(str) {
-  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const cleanedStr = str.replace(/[\W_]/g, '').toLowerCase();
   return cleanedStr === cleanedStr.split('').reverse().join('');
 }
 
 /**
- * Найдите самое длинное слово в предложении.Если есть несколько самых длинных слов,
- * Функция возвращает первую встречу.
+ * Find the longest word in the sentence. If there are multiple longest words,
+ * the function returns the first one encountered.
  *
- * @param {string} sentence - Входное предложение.
- * @returns {string} - Самое длинное слово в предложении.
+ * @param {string} sentence - The input sentence.
+ * @returns {string} - The longest word in the sentence.
  *
  * @example:
  *   findLongestWord('The quick brown fox') => 'quick'
@@ -352,39 +343,38 @@ function isPalindrome(str) {
  *   findLongestWord('No words here') => 'words'
  */
 function findLongestWord(sentence) {
-  return sentence.split(' ').reduce((longest, current) => {
-    return current.length > longest.length ? current : longest;
-  }, '');
+  return sentence
+    .split(' ')
+    .reduce(
+      (longest, current) =>
+        current.length > longest.length ? current : longest,
+      ''
+    );
 }
 
 /**
- * Возвращает строку, в которой каждое слово изменяется.
+ * Returns the string where each word is reversed.
  *
- * @param {string} str -Входная строка.
- * @return {string} - Строка, где каждое слово изменяется.
+ * @param {string} str - The input string.
+ * @return {string} - The string where each word is reversed.
  *
  * @example:
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
 function reverseWords(str) {
-  const words = str.split(' ');
-  const reversedWords = [];
-  for (let i = 0; i < words.length; i) {
-    let reversedWord = '';
-    for (let j = words[i].length - 1; j >= 0; j) {
-      reversedWord += words[i][j];
-    }
-    reversedWords.push(reversedWord);
-  }
-  return reversedWords.join(' ');
+  const reversedWords = str
+    .split(' ')
+    .map((word) => word.split('').reverse().join(''));
+  const uniqueReversedWords = Array.from(new Set(reversedWords));
+  return uniqueReversedWords.join(' ');
 }
 
 /**
- * Инвертирует случай каждого символа в данной строке.
+ * Inverts the case of each character in the given string.
  *
- * @param {string} str - Входная строка.
- * @returns {string} - Строка с случаем каждого символа перевернута.
+ * @param {string} str - The input string.
+ * @returns {string} - The string with the case of each character inverted.
  *
  * @example
  *   invertCase('Hello, World!') =>  'hELLO, wORLD!'
@@ -404,13 +394,13 @@ function invertCase(str) {
 }
 
 /**
- * Возвращает результат шаблона строки и заданных параметров FirstName и Lastname.
- * Пожалуйста, не используйте Concatenation, используйте строку шаблона:
+ * Returns the result of string template and given parameters firstName and lastName.
+ * Please do not use concatenation, use template string :
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
  *
- * @param {string} firstName - Первое имя включает в шаблон.
- * @param {string} lastName - Фамилия для включения в шаблон.
- * @return {string} - Форматированная строка, сгенерированная из шаблона.
+ * @param {string} firstName - The first name to include in the template.
+ * @param {string} lastName - The last name to include in the template.
+ * @return {string} - The formatted string generated from the template.
  *
  * @example
  *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
@@ -421,10 +411,10 @@ function getStringFromTemplate(firstName, lastName) {
 }
 
 /**
- * Извлекает имя из String String 'Hello, First_name Last_Name!'.
+ * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
- * @param {string} value - Входное значение.
- * @return {string} - Имя извлечено из шаблона.
+ * @param {string} value - The input value.
+ * @return {string} - The name extracted from the template.
  *
  * @example
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
@@ -435,10 +425,10 @@ function extractNameFromTemplate(value) {
 }
 
 /**
- * Снимите первые и последние угловые кронштейны из строки тега
+ * Remove the first and last angle brackets from tag string
  *
- * @param {string} str -Входной тег.
- * @return {string} - Метка без первого и последнего углового кронштейна.
+ * @param {string} str - The input tag.
+ * @return {string} - The tag without the first and last angle brackets.
  *
  * @example
  *   unbracketTag('<div>') => 'div'
@@ -450,10 +440,10 @@ function unbracketTag(str) {
 }
 
 /**
- * Извлекает электронные письма из одной строки с списком электронных писем, разграниченных полуколонами
+ * Extracts e-mails from single string with e-mails list delimited by semicolons
  *
- * @param {string} str - Входная строка.
- * @return {array} -Список электронных писем, извлеченных из строки.
+ * @param {string} str - The input string.
+ * @return {array} - The list of e-mails extracted from the string.
  *
  * @example
  *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
@@ -469,11 +459,11 @@ function extractEmails(str) {
 }
 
 /**
- * Кодировать указанную строку с шифром ROT13
+ * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
  *
- * @param {string} str - Входная строка.
- * @return {string} - Кодированная строка ROT13.
+ * @param {string} str - The input string.
+ * @return {string} - The ROT13 encoded string.
  *
  * @example
  *
@@ -497,9 +487,9 @@ function encodeToRot13(str) {
 }
 
 /**
- * Возвращает идентификатор карты Playid.
+ * Returns playid card id.
  *
- * Игрательные карты Начальная колода включает в себя карты в следующем заказе:
+ * Playing cards initial deck includes the cards in the following order:
  *
  *  'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
  *  'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
@@ -507,10 +497,10 @@ function encodeToRot13(str) {
  *  'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'
  *
  * (see https://en.wikipedia.org/wiki/Standard_52-card_deck)
- * Функция возвращает индекс на основе нуля указанной карты в начальной палубе выше.
+ * Function returns the zero-based index of specified card in the initial deck above.
  *
- * @param {string} value - Значение карты.
- * @return {number} - Индекс на основе нуля.
+ * @param {string} value - The card value.
+ * @return {number} - The zero-based index.
  *
  * @example
  *   'A♣' => 0
