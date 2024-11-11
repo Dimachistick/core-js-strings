@@ -1,5 +1,12 @@
+/* *******************************************************************************************
+ *                                                                                           *
+ * Please read the following tutorial before implementing tasks:                              *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
+ *                                                                                           *
+ ******************************************************************************************* */
+
 /**
- * Возвращает длину данной строки.
+ * Returns the length of the given string.
  *
  * @param {string} value - Входная строка для расчета длины.
  * @return {number} -Длина струны.
@@ -70,7 +77,6 @@ function getFirstChar(value) {
   }
   return value.charAt(0);
 }
-
 /**
  * Удаляет ведущие и следующий пробел символов из строки.
  *
