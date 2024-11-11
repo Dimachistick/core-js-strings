@@ -70,6 +70,7 @@ function getFirstChar(value) {
   }
   return value.charAt(0);
 }
+
 /**
  * Удаляет ведущие и следующий пробел символов из строки.
  *
